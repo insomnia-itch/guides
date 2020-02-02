@@ -31,6 +31,8 @@ yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
 }
 ```
 
+Run this method in `Start()`.
+
 #### Update position within bounds of Camera
 ```c#
 // transform.position.x is the current x position of the GameObject
@@ -38,5 +40,7 @@ var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 var newYPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
 transform.position = new Vector2(newXPos, newYPos);
 ```
+
+We need to run this in `Update()`.
 
 Then press play and try it out. That should do it~
